@@ -30,6 +30,6 @@ _what is infrastructure as code_ -->
 
 _why use bicep instead of the portal_ -->
 
-_what is a modeule_ -->
+_what is a module_ -->
 
-_what is a parameter_ --> a parameter lets you bring in values from outside the bicep file
+_what is a parameter_ --> a parameter lets you bring in values from outside the bicep file. You can also optionally provide a default parameter value.
