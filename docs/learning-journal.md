@@ -23,3 +23,6 @@ Information I want for my email:
 - date (for sorting)
 
 Notes:
+
+- need to make each individual article into an Article object that is added to a list
+- make the date a string, was having issues using it as type DateTime
