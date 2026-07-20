@@ -10,7 +10,7 @@ string url = "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?boar
 using (XmlReader reader = XmlReader.Create(url))
 {
     SyndicationFeed feed = SyndicationFeed.Load(reader);
-    Console.WriteLine(feed.Title.Text);
+    Console.WriteLine("--------" + feed.Title.Text + "--------");
     Console.WriteLine(feed.Links[0].Uri);
     Console.WriteLine(" ");
 
