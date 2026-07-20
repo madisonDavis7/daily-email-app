@@ -1,5 +1,7 @@
 Date: 7/20/26
 
+Title: RSS feed stuffs
+
 Why:
 This app is going to use RSS feeds to give me content for the daily emails.
 
@@ -18,5 +20,6 @@ Information I want for my email:
 - title
 - link
 - description
+- date (for sorting)
 
 Notes:

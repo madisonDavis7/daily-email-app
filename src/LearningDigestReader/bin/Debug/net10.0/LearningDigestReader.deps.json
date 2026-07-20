@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "LearningDigestReader/1.0.0": {
+        "dependencies": {
+          "System.ServiceModel.Syndication": "10.0.10"
+        },
+        "runtime": {
+          "LearningDigestReader.dll": {}
+        }
+      },
+      "System.ServiceModel.Syndication/10.0.10": {
+        "runtime": {
+          "lib/net10.0/System.ServiceModel.Syndication.dll": {
+            "assemblyVersion": "10.0.0.10",
+            "fileVersion": "10.0.1026.32716"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LearningDigestReader/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.ServiceModel.Syndication/10.0.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jU3WQG477Tk7RYlM2Ky8oySb6WHd744LgK7MYRMe4L8FcoJI3Gbpcf29sB2lIlJVS82ah9i4FUw3RfbXeJs8jw==",
+      "path": "system.servicemodel.syndication/10.0.10",
+      "hashPath": "system.servicemodel.syndication.10.0.10.nupkg.sha512"
+    }
+  }
+}

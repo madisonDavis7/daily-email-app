@@ -1,11 +1,60 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "System.ServiceModel.Syndication/10.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "System.ServiceModel.Syndication/10.0.10": {
+      "sha512": "jU3WQG477Tk7RYlM2Ky8oySb6WHd744LgK7MYRMe4L8FcoJI3Gbpcf29sB2lIlJVS82ah9i4FUw3RfbXeJs8jw==",
+      "type": "package",
+      "path": "system.servicemodel.syndication/10.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.ServiceModel.Syndication.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.ServiceModel.Syndication.targets",
+        "lib/net10.0/System.ServiceModel.Syndication.dll",
+        "lib/net10.0/System.ServiceModel.Syndication.xml",
+        "lib/net462/System.ServiceModel.Syndication.dll",
+        "lib/net462/System.ServiceModel.Syndication.xml",
+        "lib/net8.0/System.ServiceModel.Syndication.dll",
+        "lib/net8.0/System.ServiceModel.Syndication.xml",
+        "lib/net9.0/System.ServiceModel.Syndication.dll",
+        "lib/net9.0/System.ServiceModel.Syndication.xml",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "system.servicemodel.syndication.10.0.10.nupkg.sha512",
+        "system.servicemodel.syndication.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "System.ServiceModel.Syndication >= 10.0.10"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\MadisonDavis(AZ)\\.nuget\\packages\\": {},
@@ -58,6 +107,12 @@
       "net10.0": {
         "framework": "net10.0",
         "targetAlias": "net10.0",
+        "dependencies": {
+          "System.ServiceModel.Syndication": {
+            "target": "Package",
+            "version": "[10.0.10, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
