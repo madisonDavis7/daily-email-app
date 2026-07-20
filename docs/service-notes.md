@@ -26,10 +26,10 @@ _what are tables_ --> table storage is a service that stores non-relational stru
 
 _why do function apps require storage accounts_ -->
 
-_what is infrastructure as code_ -->
+_what is infrastructure as code_ --> infrastructure as code means you can break down large deployments into smaller and simpler sub-components that can be shared and reused across projects
 
-_why use bicep instead of the portal_ -->
+_why use bicep instead of the portal_ --> bicep is more scalable and allows version control. It also creates reusability, allows for automation, and provides a simpler solution.
 
-_what is a module_ -->
+_what is a module_ --> a module is a standalone bicep file that deploys specific resources
 
 _what is a parameter_ --> a parameter lets you bring in values from outside the bicep file. You can also optionally provide a default parameter value.
