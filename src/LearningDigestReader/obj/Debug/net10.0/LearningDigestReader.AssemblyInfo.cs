@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LearningDigestReader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c16d8ef3896db8cc149f7581279c2bc55972d74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7806a12efe942ee36699de80e0fcdef65c565220")]
 [assembly: System.Reflection.AssemblyProductAttribute("LearningDigestReader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LearningDigestReader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

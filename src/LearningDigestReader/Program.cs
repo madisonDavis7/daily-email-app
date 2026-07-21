@@ -15,6 +15,8 @@ using (XmlReader reader = XmlReader.Create(url))
     Console.WriteLine(" ");
 
     List<Article> learningArticles = new List<Article>();
+
+
     foreach (SyndicationItem item in feed.Items)
     {
         var article = new Article
@@ -34,7 +36,17 @@ using (XmlReader reader = XmlReader.Create(url))
         Console.WriteLine("Published Date: " + article.Date);
         Console.WriteLine(" ");
     }
+    /* 
+    var firstFive = learningArticles.Take(5);
+
+    Console.WriteLine("-------------------------------------------");
+    foreach (Article article in firstFive)
+    {
+        Console.WriteLine(article.Title);
+    }
+    */
 }
+
 
 public class Article
 {
