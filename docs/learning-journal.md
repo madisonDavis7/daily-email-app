@@ -26,3 +26,14 @@ Notes:
 
 - need to make each individual article into an Article object that is added to a list
 - make the date a string, was having issues using it as type DateTime
+
+---
+
+Date: 7/21/26
+
+Questions:
+What is LINQ?
+
+LINQ stands for language-integrated query and its the name for a set of technologies based on the integration of query capabilities directly inot c#. A query is a first-class language construct, just like classes or methods. LINQ is a structured query syntax built to retrieve data from different types of data sources.
+
+Every LINQ query must query to some sort of data source (array, collection, XML or other database) and must be executed to get a result.
