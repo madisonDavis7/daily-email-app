@@ -1,8 +1,8 @@
 ﻿using System.Xml;
 using System.ServiceModel.Syndication;
 
-string url = "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=AzureCompute";
 
+string url = "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=AzureCompute";
 // Create an XmlReader to read the RSS feed from the URL
 using (XmlReader reader = XmlReader.Create(url))
 {
