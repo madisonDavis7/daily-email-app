@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "52pTCgnFHW4=",
+  "dgSpecHash": "RwVgE09KVv0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MadisonDavis(AZ)\\desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj",
+  "projectFilePath": "C:\\Users\\MadisonDavis(AZ)\\Desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MadisonDavis(AZ)\\.nuget\\packages\\system.servicemodel.syndication\\10.0.10\\system.servicemodel.syndication.10.0.10.nupkg.sha512"
   ],

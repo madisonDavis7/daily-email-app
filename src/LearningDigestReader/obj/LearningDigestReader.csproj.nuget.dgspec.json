@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MadisonDavis(AZ)\\desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj": {}
+    "C:\\Users\\MadisonDavis(AZ)\\Desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MadisonDavis(AZ)\\desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj": {
+    "C:\\Users\\MadisonDavis(AZ)\\Desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MadisonDavis(AZ)\\desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj",
+        "projectUniqueName": "C:\\Users\\MadisonDavis(AZ)\\Desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj",
         "projectName": "LearningDigestReader",
-        "projectPath": "C:\\Users\\MadisonDavis(AZ)\\desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj",
+        "projectPath": "C:\\Users\\MadisonDavis(AZ)\\Desktop\\daily-email-app\\src\\LearningDigestReader\\LearningDigestReader.csproj",
         "packagesPath": "C:\\Users\\MadisonDavis(AZ)\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MadisonDavis(AZ)\\desktop\\daily-email-app\\src\\LearningDigestReader\\obj\\",
+        "outputPath": "C:\\Users\\MadisonDavis(AZ)\\Desktop\\daily-email-app\\src\\LearningDigestReader\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
