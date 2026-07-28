@@ -19,7 +19,11 @@ public class LearnDigest
     [Function("LearnDigest")]
     public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
     {
-        string rssUrl = "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=AzureCompute";
+        string? rssUrl = Environment.GetEnvironmentVariable("rssFeedUrl");
+        if (string.IsNullOrEmpty(rssUrl))
+        {
+            return new BadRequestObjectResult("rssFeedUrl environment variable not set");
+        }
 
         using (XmlReader reader = XmlReader.Create(rssUrl))
         {
