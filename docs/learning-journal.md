@@ -37,3 +37,22 @@ What is LINQ?
 LINQ stands for language-integrated query and its the name for a set of technologies based on the integration of query capabilities directly inot c#. A query is a first-class language construct, just like classes or methods. LINQ is a structured query syntax built to retrieve data from different types of data sources.
 
 Every LINQ query must query to some sort of data source (array, collection, XML or other database) and must be executed to get a result.
+
+---
+
+Date: 7/28/26
+
+Questions:
+
+What is azure functions configuration and what does it entail?
+This just means making the app ready to be an azure function. It means the collection of env variables, settings and meta data that manage how an azure app behaves and connects to other services. There are 3 main parts: application settings, global host config, function-specific configs
+
+application settings --> global key-value paits used by entire app - cloud behavior - local development - common keys
+global host configurations --> the host.json file at the root of the project.  
+ - global logging - health monitoring
+function specific configurations --> defines individual functions, their input triggers, and their output bindings
+
+What is IConfiguration?
+This is a built-in interface that provides a way to read application settings from jey-valud pairs
+
+What are environmen variables?
