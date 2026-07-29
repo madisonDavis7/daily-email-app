@@ -6,9 +6,25 @@ param storageAccountName string = 'dailydigest${uniqueString(resourceGroup().id)
 resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: storageAccountName
   location: location
+  kind: 'StorageV2'
   sku: {
     name: 'Standard_LRS'
   }
-  kind: 'StorageV2'
 }
 output storageAccountName string = storageAccount.name
+
+//creates a log analytics workspace for monitoring
+resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
+  name: 'law-learning-digest'
+  location: location
+
+  properties: {
+    sku: {
+      name: 'PerGB2018'
+    }
+    retentionInDays: 10
+  }
+}
+
+//gives resourceId so other services can connect later 
+output workspaceResourceId string = logAnalyticsWorkspace.id
