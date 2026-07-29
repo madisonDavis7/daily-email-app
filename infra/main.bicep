@@ -22,9 +22,26 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2022-10
     sku: {
       name: 'PerGB2018'
     }
-    retentionInDays: 10
   }
 }
 
 //gives resourceId so other services can connect later 
 output workspaceResourceId string = logAnalyticsWorkspace.id
+
+//application insights stuff
+resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
+  name: 'app-insights-learning-digest'
+  location: location
+  kind: 'web'
+
+  properties: {
+    //because gonna monitor a web application
+    Application_Type: 'web'
+    //linking the app insights to the log analytics workspace
+    WorkspaceResourceId: logAnalyticsWorkspace.id
+  }
+}
+
+output appInsightsName string = appInsights.name
+
+output appInsightsConnectionString string = appInsights.properties.ConnectionString
