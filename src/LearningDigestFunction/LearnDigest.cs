@@ -19,12 +19,14 @@ public class LearnDigest
     [Function("LearnDigest")]
     public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
     {
+        // Get the RSS feed URL from the environment variable
         string? rssUrl = Environment.GetEnvironmentVariable("rssFeedUrl");
         if (string.IsNullOrEmpty(rssUrl))
         {
             return new BadRequestObjectResult("rssFeedUrl environment variable not set");
         }
 
+        // Load the RSS feed using XmlReader and SyndicationFeed
         using (XmlReader reader = XmlReader.Create(rssUrl))
         {
             SyndicationFeed feed = SyndicationFeed.Load(reader);
@@ -47,8 +49,5 @@ public class LearnDigest
             return new OkObjectResult(firstNumberOfArticles);
 
         }
-
-
-        //_logger.LogInformation("C# HTTP trigger function processed a request.");
     }
 }
