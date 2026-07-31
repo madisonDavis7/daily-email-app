@@ -45,3 +45,60 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
 output appInsightsName string = appInsights.name
 
 output appInsightsConnectionString string = appInsights.properties.ConnectionString
+
+param functionAppName string = 'func-learning-digest-${uniqueString(resourceGroup().id)}'
+
+//create the hosting plan(consumption plan) for the function app
+resource hostingPlan 'Microsoft.Web/serverfarms@2023-12-01' = {
+  name: 'app-learning-digest'
+  location: location
+  sku: {
+    name: 'Y1'
+    tier: 'Dynamic'
+  }
+  kind: 'functionapp'
+}
+
+//create the function app itself
+
+var storageAccountKey = listKeys(storageAccount.id, '2023-01-01').keys[0].value
+var storageConnectionString = 'DefaultEndpointsProtocol=https;AccountName=${storageAccount.name};AccountKey=${storageAccountKey};EndpointSuffix=${environment().suffixes.storage}'
+
+resource functionApp 'Microsoft.Web/sites@2023-12-01' = {
+  name: functionAppName //parameter nae NOT function app name
+  location: location
+  kind: 'functionapp'
+  properties: {
+    serverFarmId: hostingPlan.id
+    httpsOnly: true
+    siteConfig: {
+      appSettings: [
+        {
+          //function runtime storage
+          name: 'AzureWebJobsStorage'
+          value: storageConnectionString
+        }
+        {
+          //run the app on the latest version of the function runtime
+          name: 'FUNCTIONS_EXTENSION_VERSION'
+          value: '~4'
+        }
+        {
+          //runtime for the function app
+          name: 'FUNCTIONS_WORKER_RUNTIME'
+          value: 'dotnet-isolated'
+        }
+        {
+          //app insights instrumentation key
+          name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
+          value: appInsights.properties.InstrumentationKey
+        }
+        {
+          //app insights connection string
+          name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
+          value: appInsights.properties.ConnectionString
+        }
+      ]
+    }
+  }
+}

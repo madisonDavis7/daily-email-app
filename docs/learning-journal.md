@@ -48,11 +48,13 @@ What is azure functions configuration and what does it entail?
 This just means making the app ready to be an azure function. It means the collection of env variables, settings and meta data that manage how an azure app behaves and connects to other services. There are 3 main parts: application settings, global host config, function-specific configs
 
 application settings --> global key-value paits used by entire app - cloud behavior - local development - common keys
-global host configurations --> the host.json file at the root of the project.  
- - global logging - health monitoring
-function specific configurations --> defines individual functions, their input triggers, and their output bindings
+global host configurations --> the host.json file at the root of the project.
+
+- global logging - health monitoring
+  function specific configurations --> defines individual functions, their input triggers, and their output bindings
 
 What is IConfiguration?
 This is a built-in interface that provides a way to read application settings from jey-valud pairs
 
-What are environmen variables?
+What are environment variables?
+These are named values stored outside of a program that tell the application how to behave. They are written as key-value pairs.
