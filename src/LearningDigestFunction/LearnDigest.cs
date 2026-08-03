@@ -36,7 +36,7 @@ public class LearnDigest
 
             // Get the articles from the feed and take the first three
             var learningArticles = FeedReader.GetArticles(feed);
-            var firstNumberOfArticles = learningArticles.Take(3);
+            var firstNumberOfArticles = learningArticles.Take(5);
 
             foreach (Article article in firstNumberOfArticles)
             {
