@@ -58,3 +58,9 @@ This is a built-in interface that provides a way to read application settings fr
 
 What are environment variables?
 These are named values stored outside of a program that tell the application how to behave. They are written as key-value pairs.
+
+---
+
+Date: 8/03/26
+
+I got the app finished and styled for emails. I originally was tring to take the JSON output and style it directly in the body of the email but that meant I was sending an email for each article itself, which is not what I wanted. I worked on a few ideas and ended up creating an emailBody string variable that I would hold the output in. I looped through the JSON output and styled the title, link and date with HTML. Then I appended that to the variable. Outside of the loop I created an HTML wrapper and inserted the variable. Then I created my email and used the wrapper output as the body. This was the email was sent only once and neatly contained all the necessary information. Figuring out the looping and how to format the JSON output was a bit challenging but fun to work on.
