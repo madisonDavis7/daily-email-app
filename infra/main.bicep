@@ -98,6 +98,14 @@ resource functionApp 'Microsoft.Web/sites@2023-12-01' = {
           name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
           value: appInsights.properties.ConnectionString
         }
+        {
+          name: 'WEBSITE_RUN_FROM_PACKAGE'
+          value: '1'
+        }
+        {
+          name: 'rssFeedUrl'
+          value: 'https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=AzureCompute'
+        }
       ]
     }
   }
